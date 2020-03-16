@@ -1,13 +1,542 @@
 @import "reset"
+//header
+.header
+  &-bottom
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 15px 0
+    ul
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      li
+        margin: 0 30px
+        display: flex
+        justify-content: center
+        align-items: center
+        a
+          position: relative
+          &:after
+            transition: 0.5s
+            position: absolute
+            width: 0%
+            height: 2px
+            content: ''
+            background-color: $main
+            bottom: -5px
+            left: 50%
+            transform: translateX(-50%)
+          &:hover
+            &:after
+              width: 100%
+  &-center
+    padding: 15px 0
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &:after
+      position: absolute
+      content: ''
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      width: 300%
+      height: 1px
+      background-color: $accent
+    .button
+      padding-left: 30px
+      position: relative
+      font-size: 18px
+      &:after
+        position: absolute
+        content: ''
+        height: 20px
+        width: 20px
+        background-image: url(../img/icons/calculator.png)
+        background-repeat: no-repeat
+        background-size: cover
+        left: 30px
+        top: 50%
+        transform: translateY(-50%)
+    h1
+      font-size: 18px
+      width: auto
+    img
+      width: fit-content
+      height: fit-content
+  &-top
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 15px 0
+    &:after
+      position: absolute
+      content: ''
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      width: 300%
+      height: 1px
+      background-color: $accent
+    &-left
+      padding-left: 25px
+      position: relative
+      &:after
+        position: absolute
+        content: ''
+        background-image: url(../img/icons/map-black.svg)
+        background-repeat: no-repeat
+        background-size: cover
+        width: 17px
+        height: 18px
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+    &-right
+      display: flex
+      align-items: center
+      justify-content: center
+      a
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-left: 10px
+        color: #000000
+        font-size: 18px
+        img
+          height: 18px
+          width: 18px
+          border-radius: 3px
+      a:first-child
+        margin-right: 10px
+//offer
+
+.offer
+  padding: 20px 0 30px 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &-left
+    width: 55%
+    img
+      width: 100%
+  &-right
+    width: 45%
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    form
+      display: flex
+      flex-direction: column
+      padding: 40px 60px 40px 60px
+      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.12)
+      input 
+        margin: 12px 0
+      input[type="submit"]
+        margin-top: 24px
+      p
+        margin-bottom: 10px
+        margin-top: 10px
+        font-size: 18px
+      h3
+        font-size: 24px
+        font-family: 'reg'
+        font-weight: 400
+
+//service
+.service
+  padding-bottom: 30px
+  h2.title
+    font-size: 28px
+    margin-bottom: 10px
+    padding-left: 20px
+  p.subtitle
+    font-size: 18px
+    margin-bottom: 10px
+    padding-left: 20px
+  &-wrap
+    padding: 20px 0
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    &-item
+      overflow: hidden
+      background-color: $main
+      width: 30%
+      position: relative
+      margin-bottom: 35px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      padding-bottom: 40px
+      cursor: pointer
+      img
+        width: 100%
+      p
+        color: #fff
+        position: absolute
+        font-size: 16px
+        margin-bottom: 0
+        padding: 10px 0
+        left: 50%
+        transform: translateX(-50%)
+        bottom: 0
+        background-color: $main
+        width: 100%
+        height: 40px
+        transition: 0.5s
+        display: flex
+        justify-content: center
+        align-items: flex-end
+        text-align: center
+        background-color: rgba($main, 0.6)
+      &:hover
+        p
+          height: 100%
+          transition: 0.5s
+          align-items: center
+
+//gbo
+.gbo
+  padding-bottom: 40px
+  .title
+    font-size: 28px
+    line-height: 33px
+  .subtitle
+    font-size: 18px
+    margin-top: 5px
+  &-wrap
+    padding: 12px 0
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    &-item
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      width: 100%
+      min-height: 60px
+      position: relative
+      &:after
+        position: absolute
+        content: ''
+        height: 1px
+        width: 100%
+        background-color: $accent
+        bottom: 0
+        left: 0
+      &-five
+        width: 15%
+        display: flex
+        justify-content: flex-end
+        align-items: center
+      &-four
+        width: 15%
+        display: flex
+        justify-content: flex-end
+        align-items: center
+      &-three
+        width: 15%
+        display: flex
+        justify-content: flex-end
+        align-items: center
+      &-two
+        width: 35%
+        display: flex
+        justify-content: flex-start
+        align-items: center
+      &-one
+        width: 20%
+        display: flex
+        justify-content: flex-start
+        align-items: center
+      
+//features
+.features
+  padding: 30px 0
+  .title
+    font-size: 28px
+  .subtitle
+    font-size: 18px
+    margin-top: 5px
+  &-wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding-top: 60px
+    &-item
+      background-color: $main
+      padding: 30px 40px
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      width: 31%
+      margin-bottom: 35px
+      &-left
+        width: 50%
+        height: 100%
+        display: flex
+        justify-content: flex-start
+        align-items: center
+      &-right
+        width: 50%
+        h3
+          color: #fff
+          font-size: 20px
+          margin-bottom: 10px
+          padding-top: 10px
+        p
+          color: #ffffff
+          font-size: 14px
+
+
+//work
+.work
+  padding: 30px 0
+  .slick-next
+    background-image: url(../img/icons/next.svg)
+    background-repeat: no-repeat
+    background-size: cover
+    height: 30px
+    width: 30px
+    font-size: 0
+    &:before
+      display: none
+  .slick-prev
+    background-image: url(../img/icons/prev.svg)
+    background-repeat: no-repeat
+    background-size: cover
+    height: 30px
+    width: 30px
+    font-size: 0
+    &:before
+      display: none
+  .slick-dots
+    bottom: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    li
+      display: flex
+      justify-content: center
+      align-items: center
+      margin: 0 2px
+      button
+        background-color: $accent
+        height: 14px
+        width: 14px
+        border-radius: 50%
+    li.slick-active
+      button
+        background-color: $main
+  .title
+    font-size: 28px
+  .subtitle
+    font-size: 18px
+    margin-top: 5px
+    margin-bottom: 10px
+    display: flex
+    align-items: flex-end
+    justify-content: flex-start
+    b
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 3px 8px
+      border: 1px solid $main
+      color: $main
+      font-size: 28px
+      margin: 0 5px
+  &-button
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 20px
+  &-wrap
+    padding: 15px 0 40px 0
+    display: flex
+    justify-content: space-between
+    &-item
+      padding: 20px
+      margin: 20px
+      box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.22)
+      width: 31%
+      &-img
+        width: 100%
+        height: auto
+        margin-bottom: 15px
+        img
+          width: 100%
+      &-text
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+//form
+.form
+  margin-top: 20px
+  padding: 60px 60px 30px 60px
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.12)
+  margin-bottom: 70px
+  .title
+    font-size: 28px
+  .subtitle
+    font-size: 18px
+    margin-top: 5px
+    margin-bottom: 15px
+  form
+    margin-top: 40px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    div
+      width: 48%
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-bottom: 20px
+      input,select
+        width: 100%
+    div.buttons
+      width: 100%
+      margin-top: 20px
+      input
+        max-width: 340px
+//footer
+.footer
+  &-copy
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background-color: $main
+    color: #fff
+    margin: 0
+    padding: 15px 0
+    a
+      margin-top: 10px
+      color: #fff
+      font-size: 14px
+  .title
+    font-size: 28px
+  .subtitle
+    font-size: 18px
+    margin-top: 5px
+    margin-bottom: 20px
+  &-contacts
+    &-wrap
+      padding: 20px 0
+      margin-bottom: 40px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      a
+        padding-left: 30px
+        position: relative
+      &-left
+        display: flex
+        flex-direction: column
+        width: 65%
+        a:first-child
+          font-size: 24px
+          font-family: 'bold'
+          margin-bottom: 20px
+          &:after
+            position: absolute
+            content: ''
+            background-image: url(../img/icons/map-black.svg)
+            background-repeat: no-repeat
+            background-size: cover
+            width: 25px
+            height: 25px
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+        a:nth-child(2)
+          font-size: 28px
+          &:after
+            position: absolute
+            content: ''
+            background-image: url(../img/icons/phone-black.svg)
+            background-repeat: no-repeat
+            background-size: cover
+            width: 22px
+            height: 22px
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+      &-right
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        width: 35%
+        a
+          text-decoration: underline
+          margin-bottom: 10px
+          font-size: 18px
+        a:first-child
+          &:after
+            position: absolute
+            content: ''
+            background-image: url(../img/icons/vk-black.svg)
+            background-repeat: no-repeat
+            background-size: cover
+            width: 20px
+            height: 20px
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+        a:nth-child(2)
+          &:after
+            position: absolute
+            content: ''
+            background-image: url(../img/icons/inst-black.svg)
+            background-repeat: no-repeat
+            background-size: cover
+            width: 20px
+            height: 20px
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+        a:nth-child(3)
+          &:after
+            position: absolute
+            content: ''
+            background-image: url(../img/icons/letter.svg)
+            background-repeat: no-repeat
+            background-size: cover
+            width: 20px
+            height: 20px
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
 
 
 
 
 
-@import "media1200"
-@import "media992"
-@import "media768"
-@import "media578"
-@import "media440"
-@import "media380"
-@import "media360"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

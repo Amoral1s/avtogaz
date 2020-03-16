@@ -1,23 +1,23 @@
 @font-face 
 	font-family: 'reg'
 	font-display: swap
-	src: url('../fonts/GoloTextReg.ttf')
+	src: url('../fonts/Roboto-Regular.ttf')
 	font-weight: normal
 	font-style: normal
 
 @font-face 
 	font-family: 'bold'
 	font-display: swap
-	src: url('../fonts/GoloTextBold.ttf')
-	font-weight: normal
+	src: url('../fonts/Roboto-Bold.ttf')
+	font-weight: bold
 	font-style: normal
 
 
 $reg: "reg", sans-serif
 $bold: "bold", sans-serif
-$main: #4d4dff
-$light: #d3deff
-$accent: #ebf1f4
+$main: #1CADE0
+$light: #E5E5E5
+$accent: #DADADA
 
 *
 	box-sizing: border-box
@@ -32,12 +32,13 @@ body, html
 	color: #000
 	font-family: $reg
 	box-sizing: border-box
-	font-size: 14px
+	font-size: 16px
 	-ms-overflow-style: scrollbar
 
 a, a:hover, a:active, a:link, a:focus
 	text-decoration: none
 	outline: none
+	color: #000
 
 ol, ul 
 	list-style: none
@@ -90,4 +91,24 @@ h1, h2, h3, h4, h5
 @media (min-width: 1200px) 
   .container 
     max-width: 1140px 
+
+.button
+	background-color: $main
+	color: #fff
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 280px
+	height: 45px
+	cursor: pointer
+	transition: 0.5s
+	font-size: 18px
+	&:hover
+		transition: 0.5s
+		transform: scale(1.1)
+
+input, select
+	border: 1px solid #DADADA
+	padding: 12px 12px 12px 24px
+	min-height: 45px
 
