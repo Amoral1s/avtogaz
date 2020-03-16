@@ -1608,6 +1608,19 @@ input[type="submit"] {
 }
 
 @media (max-width: 440px) {
+  .features-wrap-item-right {
+    padding-left: 10px;
+  }
+  .features-wrap-item-right p {
+    font-size: 12px;
+  }
+  .features-wrap-item-left {
+    padding-right: 10px;
+  }
+  .features-wrap-item-left img {
+    width: 100%;
+    height: auto;
+  }
   .form form div {
     width: 100%;
   }
