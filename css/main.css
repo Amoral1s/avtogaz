@@ -815,6 +815,7 @@ input, select {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 20px;
+  color: #ffffff;
 }
 
 .work-wrap {
