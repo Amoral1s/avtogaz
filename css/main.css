@@ -145,13 +145,20 @@ h1, h2, h3, h4, h5 {
           transform: scale(1.1);
 }
 
-input[type="text"], select, input[type="date"], input[type="tel"] {
+input[type="text"], select, input[type="date"], input[type="tel"], input[type="email"] {
   border: 1px solid #DADADA;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   padding: 12px 12px 12px 24px;
   min-height: 45px;
+}
+
+input[type="submit"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
 }
 
 .header-bottom {
@@ -910,10 +917,124 @@ input[type="text"], select, input[type="date"], input[type="tel"] {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .form form div input, .form form div select {
   width: 100%;
+  padding-left: 40px;
+}
+
+.form form div.name:after {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 15px;
+  background-image: url(../img/icons/form/name.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form form div.mark:after {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 15px;
+  background-image: url(../img/icons/form/mark.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form form div.tel:after {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 15px;
+  background-image: url(../img/icons/form/phone.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form form div.year:after {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 15px;
+  background-image: url(../img/icons/form/year.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form form div.email:after {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 15px;
+  background-image: url(../img/icons/form/email.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form form div.weight:after {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 15px;
+  background-image: url(../img/icons/form/engine.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form form div.horse:after {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 15px;
+  background-image: url(../img/icons/form/horse.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form form div.date:after {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 15px;
+  background-image: url(../img/icons/form/calc.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .form form div.buttons {
@@ -923,6 +1044,8 @@ input[type="text"], select, input[type="date"], input[type="tel"] {
 
 .form form div.buttons input {
   max-width: 340px;
+  border: 0;
+  padding: 0;
 }
 
 .footer-copy {
