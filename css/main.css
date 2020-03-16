@@ -764,6 +764,10 @@ input, select {
   border-radius: 50%;
 }
 
+.work .slick-dots li button:before {
+  display: none;
+}
+
 .work .slick-dots li.slick-active button {
   background-color: #1CADE0;
 }
